@@ -145,7 +145,7 @@ const onGetEmailCode = () => {
   if (registerData.value.user_name === '') {
     return
   }
-  request(apiStoreData.staticApi.value.public_getEmailCode, userStore.registerData).then((res) => {
+  userStore.sendEmailCode(registerData.value.user_name+registerData.value.email_suffix).then((res)=>{
     state.isCountDown = true
     ElMessage.success(res.msg)
     handleTimeChange()
@@ -185,7 +185,6 @@ const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return
   await formEl.validate((valid, fields) => {
     if (valid) {
-      console.log('submit!')
       onRegister()
     } else {
       console.log('error submit!', fields)

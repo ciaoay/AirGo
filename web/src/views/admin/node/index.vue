@@ -87,10 +87,10 @@
         <el-table-column prop="traffic_rate" label="倍率" show-overflow-tooltip sortable="custom"></el-table-column>
         <el-table-column label="操作" width="100">
           <template #default="scope">
-            <el-button :disabled="userInfos.id !== 1" size="small" text type="primary"
+            <el-button size="small" text type="primary"
                        @click="onOpenEditNode('编辑节点', scope.row)">编辑
             </el-button>
-            <el-button :disabled="userInfos.id !== 1" size="small" text type="primary"
+            <el-button size="small" text type="primary"
                        @click="onRowDel(scope.row)">删除
             </el-button>
           </template>

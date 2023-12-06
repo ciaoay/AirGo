@@ -258,7 +258,7 @@ const onSubmit = () => {
     userStore.updateUser(userManageData.value.dialog.user)
   }
   setTimeout(() => {
-    userStore.getUserList(state.params)
+    emit('refresh')
   }, 500)
   closeDialog();
 };

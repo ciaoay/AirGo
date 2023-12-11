@@ -669,7 +669,7 @@ func ClashGenerate(node model.Node) model.ClashProxy {
 		proxy.Sni = node.Sni
 	case "hysteria":
 		proxy.Type = "hysteria2"
-		proxy.Uuid = node.UUID
+		proxy.Password = node.UUID
 		proxy.Sni = node.Sni
 	case "shadowsocks":
 		proxy.Type = "ss"
